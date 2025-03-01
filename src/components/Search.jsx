@@ -1,5 +1,5 @@
 import React from 'react'
-import { Separator } from "@/components/ui/separator" // ✅ Correct import
+import Data from "../Shared/Data"
 
 import {
     Select,
@@ -8,7 +8,8 @@ import {
     SelectTrigger,
     SelectValue,
 } from "@/components/ui/select"
-
+import { Separator } from "@/components/ui/separator" // ✅ Correct import
+import { CiSearch } from "react-icons/ci";
 function Search() {
     return (
         <div className='p-2 md:p-5 bg-white rounded-md md:rounded-full 
@@ -17,43 +18,53 @@ function Search() {
 
             <Select>
                 <SelectTrigger className="outline-none md:border-none w-full shadow-none text-lg">
-                    <SelectValue placeholder="Theme" />
+                    <SelectValue placeholder="Cars" />
                 </SelectTrigger>
                 <SelectContent>
-                    <SelectItem value="light">Light</SelectItem>
-                    <SelectItem value="dark">Dark</SelectItem>
-                    <SelectItem value="system">System</SelectItem>
+                    <SelectItem value="light">New</SelectItem>
+                    <SelectItem value="dark">Old</SelectItem>
                 </SelectContent>
             </Select>
 
-            <Separator orientation="vertical" className="h-10 w-[2px] bg-gray-300" />
+            <Separator orientation="vertical" className="hidden md:block" />
+                
+            <Select>
+                <SelectTrigger className="outline-none md:border-none w-full shadow-none text-lg">
+                    <SelectValue placeholder="Car Makers" />
+                </SelectTrigger>
+                <SelectContent>
+                
+                    {Data.CarMakes.map((maker,index)=>(
+                        <SelectItem value={maker.name}>{maker.name}</SelectItem>
+                           
+                    ))}
+                </SelectContent>
+            </Select>
+
+            <Separator orientation="vertical" className= "hidden md:block" />
 
             <Select>
                 <SelectTrigger className="outline-none md:border-none w-full shadow-none text-lg">
-                    <SelectValue placeholder="Theme" />
+                    <SelectValue placeholder="Pricing" />
                 </SelectTrigger>
                 <SelectContent>
-                    <SelectItem value="light">Light</SelectItem>
-                    <SelectItem value="dark">Dark</SelectItem>
-                    <SelectItem value="system">System</SelectItem>
+                {Data.Pricing.map((price,index)=>(
+                        <SelectItem value={price.amount}>{price.amount}</SelectItem>
+                           
+                    ))}
+                    
                 </SelectContent>
             </Select>
+             
+             <div>
 
-            <Separator orientation="vertical" className="h-10 w-[2px] bg-gray-300" />
+               {/* React Search Icon */}
+            <CiSearch className='text-[50px] bg-primary rounded-full p-3 text-white hover:scale-105 transition-all cursor-pointer'   /> 
 
-            <Select>
-                <SelectTrigger className="outline-none md:border-none w-full shadow-none text-lg">
-                    <SelectValue placeholder="Theme" />
-                </SelectTrigger>
-                <SelectContent>
-                    <SelectItem value="light">Light</SelectItem>
-                    <SelectItem value="dark">Dark</SelectItem>
-                    <SelectItem value="system">System</SelectItem>
-                </SelectContent>
-            </Select>
+             </div>     
 
         </div>
     )
 }
-
+ 
 export default Search
