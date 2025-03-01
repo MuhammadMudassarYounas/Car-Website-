@@ -5,7 +5,11 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import   Home  from '../src/Home.jsx'
 import "./index.css"; 
 import  ContactPage  from '../src/contact.jsx'
+
+import "./index.css"
+
 import { ClerkProvider } from '@clerk/clerk-react'
+
 
 
 
