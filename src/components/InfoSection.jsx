@@ -2,33 +2,36 @@ import React from 'react'
 
 function InfoSection() {
   return (
-    <section>
-  <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 lg:px-8">
-    <div className="grid grid-cols-1 gap-4 md:grid-cols-4 md:items-center md:gap-8">
-      <div className="md:col-span-3">
+<section className="bg-gray-100 py-16">
+  <div className="max-w-screen-xl mx-auto px-6 lg:px-8">
+    <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-8">
+      
+      {/* Image Section */}
+      <div>
         <img
-          src="https://images.unsplash.com/photo-1731690415686-e68f78e2b5bd?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          className="rounded"
-          alt=""
+          src="https://get.wallhere.com/photo/sport-sunset-car-vehicle-McLaren-sports-car-McLaren-MP4-12C-gray-performance-car-MP4-12C-supercar-land-vehicle-automotive-design-automobile-make-luxury-vehicle-mclaren-automotive-587950.jpg"
+          className="rounded-lg w-full h-auto object-cover"
+          alt="Car"
         />
       </div>
 
-      <div className="md:col-span-1">
-        <div className="max-w-lg md:max-w-none">
-          <h2 className="text-2xl font-semibold text-gray-900 sm:text-3xl">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          </h2>
-
-          <p className="mt-4 text-gray-700">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur doloremque saepe
-            architecto maiores repudiandae amet perferendis repellendus, reprehenderit voluptas
-            sequi.
-          </p>
-        </div>
+      {/* Text Content */}
+      <div className="flex flex-col justify-center">
+        <h2 className="text-3xl font-bold text-gray-900 mb-4">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, debitis.
+        </h2>
+        <p className="text-gray-700 mb-6">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem est esse numquam odio
+          deleniti, beatae, magni dolores provident.
+        </p>
+        <button className="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition">
+          Get in Touch
+        </button>
       </div>
     </div>
   </div>
 </section>
+
   )
 }
 
