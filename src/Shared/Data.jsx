@@ -38,48 +38,50 @@ const Category=[
     {
         id:1,
         name:'SUV',
-        icon:"https://www.flaticon.com/free-icons/suv"
+        img_src:"/CarIcons/suv.png"
     },
     {
         id:2,
         name:'Sedan',
-        icon:''
+        img_src:"/CarIcons/sedan.png" 
     },
     {
         id:3,
         name:'Hatchback',
-        icon:"https://www.flaticon.com/free-icons/hatchback" 
+        img_src:"/CarIcons/hatchback.png" 
     },
     {
         id:4,
         name:'Coupe',
-        icon:"https://www.flaticon.com/free-icons/coupe"
+        img_src:"/CarIcons/coupe.png" 
+
+
     },
     
     {
         id:5,
         name:'Hybrid',
-        icon:"https://www.flaticon.com/free-icons/car" 
+        img_src:"/CarIcons/hatchback.png" 
     }, 
     {
         id:6,
         name:'Convertible',
-        icon:"https://www.flaticon.com/free-icons/convertible" 
+        img_src:"/CarIcons/convertible.png" 
     }, 
     {
         id:7,
         name:'Van',
-        icon:"https://www.flaticon.com/free-icons/van"
+        img_src:"/CarIcons/van.png" 
     }, 
     {
         id:8,
         name:'Truck',
-        icon:"https://www.flaticon.com/free-icons/delivery" 
+        img_src:"/CarIcons/truck.png" 
     }, 
     {
         id:9,
         name:'Electric',
-        icon:"https://www.flaticon.com/free-icons/ev"
+        img_src:"/CarIcons/electric-car.png" 
     },
 ]
 export default {

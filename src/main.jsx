@@ -9,6 +9,8 @@ import  ContactPage  from '../src/contact.jsx'
 import "./index.css"
 
 import { ClerkProvider } from '@clerk/clerk-react'
+import {Profile} from './profile'
+import AddListing from './add-listing/index.jsx'
 
 
 
@@ -21,6 +23,14 @@ const router= createBrowserRouter([
   {
     path:"/contact",
     element:<ContactPage/>
+  },
+  {
+    path:"/profile",
+    element:<Profile/>
+  },
+  {
+    path:"/add-listing",
+    element:<AddListing/>
   }
 ])
 
